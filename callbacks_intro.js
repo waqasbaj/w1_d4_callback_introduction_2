@@ -1,14 +1,19 @@
 
-function findWaldo(arr, found) {
-  for (var i = 0; i < arr.length; i++) {
-    if (arr[i] === "Waldo")
+function findWaldo(arr, found)
+
+{
+  arr.forEach(function(element)
+  {
+    if (element === "Waldo")
     {
       found.r=arr.indexOf("Waldo");
 
       found();   // execute callback
     }
-  }
+  });
+
 }
+
 
 function actionWhenFound()
 {
@@ -17,6 +22,9 @@ function actionWhenFound()
 }
 
 findWaldo(["Alice", "Bob", "Waldo", "Winston"], actionWhenFound);
+
+
+
 
 // var myFn = function() {
 //   console.log("I am function.");
